@@ -6,14 +6,14 @@
 --midnight-blue: #070724;
 --dark-gray: #38384F;
 --light-gray: #838391;
---sea-blue: #419EBB;
---gold: #EDA249;
---purple: #6f2ed6;
---orange: #D14C32;
---red: #D83A34;
---rust: #CD5120;
---sea-green: #1ec2a4;
---blue: #2d68f0;
+--mercury: #419EBB;
+--venus: #EDA249;
+--earth: #6f2ed6;
+--mars: #D14C32;
+--jupiter: #D83A34;
+--saturn: #CD5120;
+--uranus: #1ec2a4;
+--neptune: #2d68f0;
 }
 
 * {
@@ -24,6 +24,8 @@
 body {
   font-family: 'League Spartan', Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
+  background-color: var(--midnight-blue);
+  color: white;
 }
 
 h1,
