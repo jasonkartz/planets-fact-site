@@ -1,24 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Header 1 - Antonio Medium - 80px</h1>
+      <h2>Header 2 - Antonio Medium - 40px -1.5 Spacing</h2>
+      <h3>Header 3 - Spartan Bold - 12px - +2.6 Spacing</h3>
+      <h4>Header 4 - Spartan Bold - +1 Spacing</h4>
+      <p>Body - Spartan Regular - 14px</p>
+    </>
   );
 }
 
