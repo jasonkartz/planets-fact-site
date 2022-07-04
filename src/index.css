@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;700&display=swap');
 
+/* Variables */
+:root {
+/* Colors */
+--midnight-blue: #070724;
+--dark-gray: #38384F;
+--light-gray: #838391;
+--sea-blue: #419EBB;
+--gold: #EDA249;
+--purple: #6f2ed6;
+--orange: #D14C32;
+--red: #D83A34;
+--rust: #CD5120;
+--sea-green: #1ec2a4;
+--blue: #2d68f0;
+}
+
 * {
   box-sizing: border-box;
   margin: 0
