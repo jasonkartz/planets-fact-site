@@ -1,13 +1,20 @@
 import data from "./data.json";
 import HamburgerIcon from "./HamburgerIcon";
+import { useState } from "react";
+
 function App() {
+  const [displayMenu, setDisplayMenu] = useState(false);
+  console.log(displayMenu);
   return (
     <div className="container">
       <header>
         <h2>
-          <span>THE PLANETS</span> <HamburgerIcon />
+          <span>THE PLANETS</span>{" "}
+          <button onClick={() => setDisplayMenu(!displayMenu)}>
+            <HamburgerIcon />
+          </button>
         </h2>
-        <nav>
+        <nav style={{ display: displayMenu ? "block" : "none" }}>
           <ul>
             <li>
               <div className="bullet bullet-mercury"></div>
@@ -59,8 +66,12 @@ function App() {
             <button>Structure</button>
             <button>Surface</button>
           </menu>
-          <img class="img-planet" src={data[0].images.planet} alt="mercury" />
-          <div class="info-text">
+          <img
+            className="img-planet"
+            src={data[0].images.planet}
+            alt="mercury"
+          />
+          <div className="info-text">
             <h1>{data[0].name}</h1>
             <p>{data[0].overview.content}</p>
             <cite>
