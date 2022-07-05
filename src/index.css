@@ -6,19 +6,51 @@
 --midnight-blue: #070724;
 --dark-gray: #38384F;
 --light-gray: #838391;
---mercury: #419EBB;
---venus: #EDA249;
---earth: #6f2ed6;
---mars: #D14C32;
---jupiter: #D83A34;
---saturn: #CD5120;
---uranus: #1ec2a4;
---neptune: #2d68f0;
+--mercury-btn: #419EBB;
+--venus-btn: #EDA249;
+--earth-btn: #6f2ed6;
+--mars-btn: #D14C32;
+--jupiter-btn: #D83A34;
+--saturn-btn: #CD5120;
+--uranus-btn: #1ec2a4;
+--neptune-btn: #2d68f0;
+--mercury-bullet: #DEF4FC;
+--venus-bullet: #F7CC7F;
+--earth-bullet: #545BFE;
+--mars-bullet: #FF6A45;
+--jupiter-bullet: #ECAD7A;
+--saturn-bullet: #FCCB6B;
+--uranus-bullet: #65F0D5;
+--neptune-bullet: #497EFA;
 }
 
 * {
   box-sizing: border-box;
   margin: 0
+}
+.bullet-mercury {
+  background-color: var(--mercury-bullet);
+}
+.bullet-venus {
+  background-color: var(--venus-bullet);
+}
+.bullet-earth {
+  background-color: var(--earth-bullet);
+}
+.bullet-mars {
+  background-color: var(--mars-bullet);
+}
+.bullet-jupiter {
+  background-color: var(--jupiter-bullet);
+}
+.bullet-saturn {
+  background-color: var(--saturn-bullet);
+}
+.bullet-uranus {
+  background-color: var(--uranus-bullet);
+}
+.bullet-neptune {
+  background-color: var(--neptune-bullet);
 }
 
 body {
@@ -60,23 +92,57 @@ h4 {
   font-size: 8px;
   color: var(--light-gray)
 }
-ul {
-  list-style: none;
+
+header h2 {
+  border-bottom: var(--light-gray) 1px solid;
+  padding: .5em;
+  font-size: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: default;
+}
+header h2 :last-child:hover {
+  cursor: pointer;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
 ul li {
   font-size: 15px;
   font-weight: bold;
   letter-spacing: 1.36px;
-  border-bottom: var(--light-gray) 1px solid;
+  padding: 1em 0;
+  margin: 0 1em;
+  border-bottom: var(--dark-gray) 1px solid;
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
 }
+ul li:last-child {
+  border-bottom: none;
+}
+ul li:hover {
+  cursor: pointer;
+  opacity: 75%;
+}
+ul li img {
+  height: 8px;
+  margin-left: auto;
+}
+
 cite {
   font-size: 12px;
   font-style: normal;
   color: var(--light-gray)
 }
 cite a {
-  color: white;
+  color: var(--light-gray)
+}
+cite img {
+  vertical-align: sub;
 }
 .bullet {
   height: 20px;
@@ -85,30 +151,7 @@ cite a {
   display: inline-block;
 }
 
-.color-mercury {
-  background-color: var(--mercury);
-}
-.color-venus {
-  background-color: var(--venus);
-}
-.color-earth {
-  background-color: var(--earth);
-}
-.color-mars {
-  background-color: var(--mars);
-}
-.color-jupiter {
-  background-color: var(--jupiter);
-}
-.color-saturn {
-  background-color: var(--saturn);
-}
-.color-uranus {
-  background-color: var(--uranus);
-}
-.color-neptune {
-  background-color: var(--neptune);
-}
+
 /* Planet sizes vary. figure out size percentage for each screen version */
 .img-planet {
   width: 29.5%;

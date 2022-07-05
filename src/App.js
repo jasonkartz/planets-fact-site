@@ -1,42 +1,53 @@
 import data from "./data.json";
+import HamburgerIcon from "./HamburgerIcon";
 function App() {
   return (
     <div className="container">
       <header>
-        <h2>THE PLANETS</h2>
+        <h2>
+          <span>THE PLANETS</span> <HamburgerIcon />
+        </h2>
         <nav>
           <ul>
             <li>
-              <div className="bullet color-mercury"></div>
+              <div className="bullet bullet-mercury"></div>
               <span>MERCURY</span>
+              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
             </li>
             <li>
-              <div className="bullet color-venus"></div>
+              <div className="bullet bullet-venus"></div>
               <span>VENUS</span>
+              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
             </li>
             <li>
-              <div className="bullet color-earth"></div>
+              <div className="bullet bullet-earth"></div>
               <span>EARTH</span>
+              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
             </li>
             <li>
-              <div className="bullet color-mars"></div>
+              <div className="bullet bullet-mars"></div>
               <span>MARS</span>
+              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
             </li>
             <li>
-              <span className="bullet color-jupiter"></span>
+              <span className="bullet bullet-jupiter"></span>
               <span>JUPITER</span>
+              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
             </li>
             <li>
-              <span className="bullet color-saturn"></span>
+              <span className="bullet bullet-saturn"></span>
               <span>SATURN</span>
+              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
             </li>
             <li>
-              <span className="bullet color-uranus"></span>
+              <span className="bullet bullet-uranus"></span>
               <span>URANUS</span>
+              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
             </li>
             <li>
-              <span className="bullet color-neptune"></span>
+              <span className="bullet bullet-neptune"></span>
               <span>NEPTUNE</span>
+              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
             </li>
           </ul>
         </nav>
@@ -53,14 +64,15 @@ function App() {
             <h1>{data[0].name}</h1>
             <p>{data[0].overview.content}</p>
             <cite>
-              Source:{" "}
+              Source :{" "}
               <a
                 href={data[0].overview.source}
                 target="_blank"
                 rel="noreferrer"
               >
                 Wikipedia
-              </a>
+              </a>{" "}
+              <img src="./assets/icon-source.svg" alt="source-icon" />
             </cite>
           </div>
         </section>
