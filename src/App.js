@@ -62,15 +62,17 @@ function App() {
       <main>
         <section className="info-section">
           <menu>
-            <button>Overview</button>
-            <button>Structure</button>
-            <button>Surface</button>
+            <button>OVERVIEW</button>
+            <button>STRUCTURE</button>
+            <button>SURFACE</button>
           </menu>
-          <img
-            className="img-planet"
-            src={data[0].images.planet}
-            alt="mercury"
-          />
+          <div className="img-planet-container">
+            <img
+              className="img-planet"
+              src={data[0].images.planet}
+              alt="mercury"
+            />
+          </div>
           <div className="info-text">
             <h1>{data[0].name}</h1>
             <p>{data[0].overview.content}</p>

@@ -104,7 +104,7 @@ header h2 {
 }
 header h2 button {
   background-color: transparent;
-  padding-top: 8px;
+  padding: 8px 0 0 0;
 }
 header h2 button:hover {
   cursor: pointer;
@@ -161,7 +161,34 @@ cite img {
   display: inline-block;
 }
 
-
+menu {
+  padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: var(--light-gray) 1px solid;
+}
+menu button {
+  font-size: 9px;
+  font-weight: bold;
+  letter-spacing: 1.93px;
+  background-color: transparent;
+  color: var(--light-gray);
+  padding: 1em 0;
+}
+menu button:hover {
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1.25em;
+}
+.img-planet-container {
+  height: 256px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 /* Planet sizes vary. figure out size percentage for each screen version */
 .img-planet {
   width: 29.5%;
