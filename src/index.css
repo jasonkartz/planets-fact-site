@@ -24,22 +24,27 @@
 body {
   font-family: 'League Spartan', Verdana, Geneva, Tahoma, sans-serif;
   color: white;
-  font-size: 14px;
+  font-size: 11px;
   text-align: center;
   background-color: var(--midnight-blue);
   background-image: url("../public/assets/background-stars.svg");
+}
+.container {
+  max-width: 375px;
+  margin: auto;
 }
 
 h1,
 h2 {
   font-family: 'Antonio','Courier New', Courier, monospace;
   font-weight: 500;
+  text-transform: uppercase;
 }
 h1 {
-  font-size: 80px;
+  font-size: 40px;
 }
 h2 {
-  font-size: 40px;
+  font-size: 20px;
   letter-spacing: -1.5px;
 }
 
@@ -52,6 +57,8 @@ h3 {
 }
 h4 {
   letter-spacing: 1px;
+  font-size: 8px;
+  color: var(--light-gray)
 }
 ul {
   list-style: none;
@@ -63,7 +70,14 @@ ul li {
   letter-spacing: 1.36px;
   border-bottom: var(--light-gray) 1px solid;
 }
-
+cite {
+  font-size: 12px;
+  font-style: normal;
+  color: var(--light-gray)
+}
+cite a {
+  color: white;
+}
 .bullet {
   height: 20px;
   width: 20px;
@@ -94,4 +108,16 @@ ul li {
 }
 .color-neptune {
   background-color: var(--neptune);
+}
+/* Planet sizes vary. figure out size percentage for each screen version */
+.img-planet {
+  width: 29.5%;
+}
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.info-text cite {
+  margin: 1em 0;
 }

@@ -1,7 +1,7 @@
 import data from "./data.json";
 function App() {
   return (
-    <>
+    <div className="container">
       <header>
         <h2>THE PLANETS</h2>
         <nav>
@@ -48,15 +48,21 @@ function App() {
             <button>Structure</button>
             <button>Surface</button>
           </menu>
-          <img src={data[0].images.planet} alt="mercury" />
-          <h1>{data[0].name}</h1>
-          <p>{data[0].overview.content}</p>
-          <cite>
-            Source:{" "}
-            <a href={data[0].overview.source} target="_blank" rel="noreferrer">
-              Wikipedia
-            </a>
-          </cite>
+          <img class="img-planet" src={data[0].images.planet} alt="mercury" />
+          <div class="info-text">
+            <h1>{data[0].name}</h1>
+            <p>{data[0].overview.content}</p>
+            <cite>
+              Source:{" "}
+              <a
+                href={data[0].overview.source}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Wikipedia
+              </a>
+            </cite>
+          </div>
         </section>
         <section className="stats-section">
           <div className="stat-box">
@@ -77,7 +83,7 @@ function App() {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 }
 
