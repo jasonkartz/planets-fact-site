@@ -1,11 +1,17 @@
+import data from "./data.json";
 function App() {
   return (
     <>
-      <h1>Header 1 - Antonio Medium - 80px</h1>
-      <h2>Header 2 - Antonio Medium - 40px -1.5 Spacing</h2>
-      <h3>Header 3 - Spartan Bold - 12px - +2.6 Spacing</h3>
-      <h4>Header 4 - Spartan Bold - +1 Spacing</h4>
-      <p>Body - Spartan Regular - 14px</p>
+      <header></header>
+      <img src={data[0].images.planet} alt="mercury" />
+      <h1>{data[0].name}</h1>
+      <p>{data[0].overview.content}</p>
+      <cite>
+        Source:{" "}
+        <a href={data[0].overview.source} target="_blank" rel="noreferrer">
+          Wikipedia
+        </a>
+      </cite>
     </>
   );
 }

@@ -23,9 +23,10 @@
 
 body {
   font-family: 'League Spartan', Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
   font-size: 14px;
   background-color: var(--midnight-blue);
-  color: white;
+  background-image: url("../public/assets/background-stars.svg");
 }
 
 h1,
