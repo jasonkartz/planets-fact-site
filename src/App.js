@@ -1,6 +1,7 @@
 import data from "./data.json";
 import HamburgerIcon from "./HamburgerIcon";
 import SourceIcon from "./SourceIcon";
+import ChevronIcon from "./ChevronIcon";
 import { useState } from "react";
 
 function App() {
@@ -20,42 +21,42 @@ function App() {
             <li>
               <div className="bullet bullet-mercury"></div>
               <span>MERCURY</span>
-              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
+              <ChevronIcon />
             </li>
             <li>
               <div className="bullet bullet-venus"></div>
               <span>VENUS</span>
-              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
+              <ChevronIcon />
             </li>
             <li>
               <div className="bullet bullet-earth"></div>
               <span>EARTH</span>
-              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
+              <ChevronIcon />
             </li>
             <li>
               <div className="bullet bullet-mars"></div>
               <span>MARS</span>
-              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
+              <ChevronIcon />
             </li>
             <li>
               <span className="bullet bullet-jupiter"></span>
               <span>JUPITER</span>
-              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
+              <ChevronIcon />
             </li>
             <li>
               <span className="bullet bullet-saturn"></span>
               <span>SATURN</span>
-              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
+              <ChevronIcon />
             </li>
             <li>
               <span className="bullet bullet-uranus"></span>
               <span>URANUS</span>
-              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
+              <ChevronIcon />
             </li>
             <li>
               <span className="bullet bullet-neptune"></span>
               <span>NEPTUNE</span>
-              <img src="./assets/icon-chevron.svg" alt="chevron-icon" />
+              <ChevronIcon />
             </li>
           </ul>
         </nav>
