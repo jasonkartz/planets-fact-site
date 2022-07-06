@@ -1,5 +1,6 @@
 import data from "./data.json";
 import HamburgerIcon from "./HamburgerIcon";
+import SourceIcon from "./SourceIcon";
 import { useState } from "react";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
         <h2>
           <span>THE PLANETS</span>{" "}
           <button onClick={() => setDisplayMenu(!displayMenu)}>
-            <HamburgerIcon />
+            <HamburgerIcon displayMenu={displayMenu} />
           </button>
         </h2>
         <nav style={{ display: displayMenu ? "block" : "none" }}>
@@ -85,7 +86,13 @@ function App() {
               >
                 Wikipedia
               </a>{" "}
-              <img src="./assets/icon-source.svg" alt="source-icon" />
+              <a
+                href={data[0].overview.source}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <SourceIcon />
+              </a>
             </cite>
           </div>
         </section>

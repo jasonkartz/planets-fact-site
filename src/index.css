@@ -65,7 +65,10 @@ body {
   max-width: 375px;
   margin: auto;
 }
-
+button {
+  background-color: transparent;
+  border: none;
+}
 h1,
 h2 {
   font-family: 'Antonio','Courier New', Courier, monospace;
@@ -159,7 +162,6 @@ menu button {
   font-size: 9px;
   font-weight: bold;
   letter-spacing: 1.93px;
-  background-color: transparent;
   color: var(--light-gray);
   padding: 1em 0;
 }
@@ -168,7 +170,7 @@ menu button:hover {
   color: white;
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: 1.25em;
+  text-underline-offset: 1em;
 }
 
 .img-planet-container {
@@ -198,7 +200,13 @@ cite a {
   color: var(--light-gray);
   font-weight: bold;
 }
-cite img {
+cite:hover a {
+  color: white;
+}
+cite:hover .source-icon {
+  opacity: 1;
+}
+cite a:last-child :first-child {
   vertical-align: sub;
 }
 
