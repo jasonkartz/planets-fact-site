@@ -8,6 +8,7 @@ function App() {
   const [displayMenu, setDisplayMenu] = useState(false);
   const [planet, setPlanet] = useState(0);
   const [planetTopic, setPlanetTopic] = useState("overview");
+
   return (
     <div className="container">
       <header>
@@ -22,6 +23,7 @@ function App() {
             <li
               onClick={() => {
                 setPlanet(0);
+                setPlanetTopic("overview");
                 setDisplayMenu(!displayMenu);
               }}
             >
@@ -32,6 +34,7 @@ function App() {
             <li
               onClick={() => {
                 setPlanet(1);
+                setPlanetTopic("overview");
                 setDisplayMenu(!displayMenu);
               }}
             >
@@ -42,6 +45,7 @@ function App() {
             <li
               onClick={() => {
                 setPlanet(2);
+                setPlanetTopic("overview");
                 setDisplayMenu(!displayMenu);
               }}
             >
@@ -52,6 +56,7 @@ function App() {
             <li
               onClick={() => {
                 setPlanet(3);
+                setPlanetTopic("overview");
                 setDisplayMenu(!displayMenu);
               }}
             >
@@ -62,6 +67,7 @@ function App() {
             <li
               onClick={() => {
                 setPlanet(4);
+                setPlanetTopic("overview");
                 setDisplayMenu(!displayMenu);
               }}
             >
@@ -72,6 +78,7 @@ function App() {
             <li
               onClick={() => {
                 setPlanet(5);
+                setPlanetTopic("overview");
                 setDisplayMenu(!displayMenu);
               }}
             >
@@ -82,6 +89,7 @@ function App() {
             <li
               onClick={() => {
                 setPlanet(6);
+                setPlanetTopic("overview");
                 setDisplayMenu(!displayMenu);
               }}
             >
@@ -92,6 +100,7 @@ function App() {
             <li
               onClick={() => {
                 setPlanet(7);
+                setPlanetTopic("overview");
                 setDisplayMenu(!displayMenu);
               }}
             >
@@ -105,11 +114,36 @@ function App() {
       <main>
         <section className="info-section">
           <menu>
-            <button onClick={() => setPlanetTopic("overview")}>OVERVIEW</button>
-            <button onClick={() => setPlanetTopic("structure")}>
+            <button
+              className={
+                planetTopic === "overview"
+                  ? `menu-${data[planet].name.toLowerCase()}`
+                  : "topic-btn"
+              }
+              onClick={() => setPlanetTopic("overview")}
+            >
+              OVERVIEW
+            </button>
+            <button
+              className={
+                planetTopic === "structure"
+                  ? `menu-${data[planet].name.toLowerCase()}`
+                  : "topic-btn"
+              }
+              onClick={() => setPlanetTopic("structure")}
+            >
               STRUCTURE
             </button>
-            <button onClick={() => setPlanetTopic("geology")}>SURFACE</button>
+            <button
+              className={
+                planetTopic === "geology"
+                  ? `menu-${data[planet].name.toLowerCase()}`
+                  : "topic-btn"
+              }
+              onClick={() => setPlanetTopic("geology")}
+            >
+              SURFACE
+            </button>
           </menu>
           <div className="img-planet-container">
             <img

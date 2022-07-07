@@ -65,7 +65,6 @@ body {
   background-image: url("../public/assets/background-stars.svg");
 }
 .container {
-  min-width: 375px;
   margin: auto;
 }
 button {
@@ -169,19 +168,83 @@ menu {
   justify-content: space-between;
   border-bottom: var(--border);
 }
-menu button {
+ menu button {
   font-size: 9px;
   font-weight: bold;
   letter-spacing: 1.93px;
   color: var(--light-gray);
   padding: 1em 0;
 }
-menu button:hover {
+.topic-btn:hover {
   cursor: pointer;
   color: white;
+  /*text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: .65em;*/
+}
+.menu-mercury {
+  cursor: default;
+  color: white;
   text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 1em;
+  text-decoration-color: var(--mercury-btn);
+  text-decoration-thickness: 4px;
+  text-underline-offset: .65em;
+}
+.menu-venus {
+  cursor: default;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--venus-btn);
+  text-decoration-thickness: 4px;
+  text-underline-offset: .65em;
+}
+.menu-earth {
+  cursor: default;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--earth-btn);
+  text-decoration-thickness: 4px;
+  text-underline-offset: .65em;
+}
+.menu-mars {
+  cursor: default;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--mars-btn);
+  text-decoration-thickness: 4px;
+  text-underline-offset: .65em;
+}
+.menu-jupiter {
+  cursor: default;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--jupiter-btn);
+  text-decoration-thickness: 4px;
+  text-underline-offset: .65em;
+}
+.menu-saturn {
+  cursor: default;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--saturn-btn);
+  text-decoration-thickness: 4px;
+  text-underline-offset: .65em;
+}
+.menu-uranus {
+  cursor: default;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--uranus-btn);
+  text-decoration-thickness: 4px;
+  text-underline-offset: .65em;
+}
+.menu-neptune {
+  cursor: default;
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--neptune-btn);
+  text-decoration-thickness: 4px;
+  text-underline-offset: .65em;
 }
 
 .img-planet-container {
@@ -189,9 +252,9 @@ menu button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; 
 }
-/* Planet sizes vary. figure out size percentage for each screen version */
+
 .img-planet {
   transform: scale(35%)
 }
