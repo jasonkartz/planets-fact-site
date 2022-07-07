@@ -65,7 +65,7 @@ body {
   background-image: url("../public/assets/background-stars.svg");
 }
 .container {
-  max-width: 375px;
+  min-width: 375px;
   margin: auto;
 }
 button {
@@ -99,6 +99,7 @@ h4 {
   color: var(--light-gray)
 }
 
+
 header h2 {
   border-bottom: var(--border);
   padding: .5em;
@@ -118,13 +119,14 @@ header h2 button:hover {
 nav {
   display: none;
   position: absolute;
+  min-width: 100%;
+  border-bottom: var(--border);
+  background-color: var(--midnight-blue);
   z-index: 1;
-  width: 375px;
 }
 ul {
   list-style: none;
   padding: 0;
-  background-color: var(--midnight-blue);
   padding: 1.5em;
 }
 ul li {
@@ -191,7 +193,12 @@ menu button:hover {
 }
 /* Planet sizes vary. figure out size percentage for each screen version */
 .img-planet {
-  width: 29.5%;
+  transform: scale(35%)
+}
+.img-geology {
+  transform: scale(20%);
+  position: absolute;
+  top: 9em;
 }
 .info-text {
   padding: 0 1.5em;
