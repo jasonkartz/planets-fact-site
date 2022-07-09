@@ -56,6 +56,8 @@
   background-color: var(--neptune-bullet);
 }
 
+/* Mobile styles */
+
 body {
   font-family: 'League Spartan', Verdana, Geneva, Tahoma, sans-serif;
   color: white;
@@ -123,12 +125,12 @@ nav {
   background-color: var(--midnight-blue);
   z-index: 1;
 }
-ul {
+nav ul {
   list-style: none;
   padding: 0;
   padding: 1.5em;
 }
-ul li {
+nav ul li {
   font-size: 15px;
   font-weight: bold;
   letter-spacing: 1.36px;
@@ -138,21 +140,21 @@ ul li {
   gap: 1.5em;
   align-items: center;
 }
-ul li :last-child {
+nav ul li :last-child {
   margin-left: auto;
 }
-ul li:last-child {
+nav ul li:last-child {
   border-bottom: none;
 }
-ul li:hover {
+nav ul li:hover {
   cursor: pointer;
 }
-ul li:hover span {
+nav ul li:hover span {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: .25em;
 }
-ul li:hover :last-child {
+nav ul li:hover :last-child {
   opacity: 1;
 }
 .bullet {
@@ -178,9 +180,6 @@ menu {
 .topic-btn:hover {
   cursor: pointer;
   color: white;
-  /*text-decoration: underline;
-  text-decoration-thickness: 4px;
-  text-underline-offset: .65em;*/
 }
 .menu-mercury {
   cursor: default;
@@ -301,4 +300,34 @@ cite a:last-child :first-child {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* Tablet styles */
+
+@media (min-width: 768px) {
+  header h2 {
+    display: block;
+    border: none;
+  }
+  nav {
+    display: block;
+    position: relative;
+    z-index: 0;
+  }
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  nav ul li {
+    border: none;
+  }
+  .mobile-menu-btn {
+    display: none;
+  }
+  .bullet {
+    display: none;
+  }
+  .chevron-icon {
+    display: none;
+  }
 }

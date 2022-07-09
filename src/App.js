@@ -14,11 +14,14 @@ function App() {
       <header>
         <h2>
           <span>THE PLANETS</span>{" "}
-          <button onClick={() => setDisplayMenu(!displayMenu)}>
+          <button
+            class="mobile-menu-btn"
+            onClick={() => setDisplayMenu(!displayMenu)}
+          >
             <HamburgerIcon displayMenu={displayMenu} />
           </button>
         </h2>
-        <nav style={{ display: displayMenu ? "block" : "none" }}>
+        <nav style={{ display: displayMenu ? "block" : null }}>
           <ul>
             <li
               onClick={() => {
