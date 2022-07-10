@@ -1,35 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@500&family=League+Spartan:wght@400;700&display=swap");
 
 /* Variables */
 :root {
-/* Colors */
---midnight-blue: #070724;
---dark-gray: #38384F;
---light-gray: #838391;
---mercury-btn: #419EBB;
---venus-btn: #EDA249;
---earth-btn: #6f2ed6;
---mars-btn: #D14C32;
---jupiter-btn: #D83A34;
---saturn-btn: #CD5120;
---uranus-btn: #1ec2a4;
---neptune-btn: #2d68f0;
---mercury-bullet: #DEF4FC;
---venus-bullet: #F7CC7F;
---earth-bullet: #545BFE;
---mars-bullet: #FF6A45;
---jupiter-bullet: #ECAD7A;
---saturn-bullet: #FCCB6B;
---uranus-bullet: #65F0D5;
---neptune-bullet: #497EFA;
+  /* Colors */
+  --midnight-blue: #070724;
+  --dark-gray: #38384f;
+  --light-gray: #838391;
+  --mercury-btn: #419ebb;
+  --venus-btn: #eda249;
+  --earth-btn: #6f2ed6;
+  --mars-btn: #d14c32;
+  --jupiter-btn: #d83a34;
+  --saturn-btn: #cd5120;
+  --uranus-btn: #1ec2a4;
+  --neptune-btn: #2d68f0;
+  --mercury-bullet: #def4fc;
+  --venus-bullet: #f7cc7f;
+  --earth-bullet: #545bfe;
+  --mars-bullet: #ff6a45;
+  --jupiter-bullet: #ecad7a;
+  --saturn-bullet: #fccb6b;
+  --uranus-bullet: #65f0d5;
+  --neptune-bullet: #497efa;
 
-/* Other variables */
---border: var(--light-gray) .5px solid;
+  /* Other variables */
+  --border: var(--light-gray) 0.5px solid;
 }
 
 * {
   box-sizing: border-box;
-  margin: 0
+  margin: 0;
 }
 .bullet-mercury {
   background-color: var(--mercury-bullet);
@@ -59,7 +59,7 @@
 /* Mobile styles */
 
 body {
-  font-family: 'League Spartan', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "League Spartan", Verdana, Geneva, Tahoma, sans-serif;
   color: white;
   font-size: 11px;
   line-height: 25px;
@@ -76,7 +76,7 @@ button {
 }
 h1,
 h2 {
-  font-family: 'Antonio','Courier New', Courier, monospace;
+  font-family: "Antonio", "Courier New", Courier, monospace;
   font-weight: 500;
   text-transform: uppercase;
 }
@@ -98,13 +98,12 @@ h3 {
 h4 {
   letter-spacing: 1px;
   font-size: 8px;
-  color: var(--light-gray)
+  color: var(--light-gray);
 }
-
 
 header h2 {
   border-bottom: var(--border);
-  padding: .75em;
+  padding: 0.75em;
   font-size: 28px;
   display: flex;
   justify-content: space-between;
@@ -153,7 +152,7 @@ nav ul li:hover {
 nav ul li:hover span {
   text-decoration: underline;
   text-decoration-thickness: 2px;
-  text-underline-offset: .25em;
+  text-underline-offset: 0.25em;
 }
 nav ul li:hover :last-child {
   opacity: 1;
@@ -171,92 +170,71 @@ menu {
   justify-content: space-between;
   border-bottom: var(--border);
 }
- menu button {
+menu button {
   font-size: 9px;
   font-weight: bold;
   letter-spacing: 1.93px;
   color: var(--light-gray);
   padding: 1em 0;
 }
+.menu-btn-nmbr {
+  display: none;
+}
 .topic-btn:hover {
   cursor: pointer;
   color: white;
 }
-.menu-mercury {
-  cursor: default;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: var(--mercury-btn);
-  text-decoration-thickness: 4px;
-  text-underline-offset: .65em;
-}
-.menu-venus {
-  cursor: default;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: var(--venus-btn);
-  text-decoration-thickness: 4px;
-  text-underline-offset: .65em;
-}
-.menu-earth {
-  cursor: default;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: var(--earth-btn);
-  text-decoration-thickness: 4px;
-  text-underline-offset: .65em;
-}
-.menu-mars {
-  cursor: default;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: var(--mars-btn);
-  text-decoration-thickness: 4px;
-  text-underline-offset: .65em;
-}
-.menu-jupiter {
-  cursor: default;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: var(--jupiter-btn);
-  text-decoration-thickness: 4px;
-  text-underline-offset: .65em;
-}
-.menu-saturn {
-  cursor: default;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: var(--saturn-btn);
-  text-decoration-thickness: 4px;
-  text-underline-offset: .65em;
-}
-.menu-uranus {
-  cursor: default;
-  color: white;
-  text-decoration: underline;
-  text-decoration-color: var(--uranus-btn);
-  text-decoration-thickness: 4px;
-  text-underline-offset: .65em;
-}
+
+.menu-mercury,
+.menu-venu,
+.menu-earth,
+.menu-mars,
+.menu-jupiter,
+.menu-saturn,
+.menu-uranus,
 .menu-neptune {
   cursor: default;
   color: white;
   text-decoration: underline;
-  text-decoration-color: var(--neptune-btn);
   text-decoration-thickness: 4px;
-  text-underline-offset: .65em;
+  text-underline-offset: 0.65em;
 }
 
+.menu-mercury {
+  text-decoration-color: var(--mercury-btn);
+}
+.menu-venus {
+  text-decoration-color: var(--venus-btn);
+}
+.menu-earth {
+  text-decoration-color: var(--earth-btn);
+}
+.menu-mars {
+  text-decoration-color: var(--mars-btn);
+}
+.menu-jupiter {
+  text-decoration-color: var(--jupiter-btn);
+}
+.menu-saturn {
+  text-decoration-color: var(--saturn-btn);
+}
+.menu-uranus {
+  text-decoration-color: var(--uranus-btn);
+}
+.menu-neptune {
+  text-decoration-color: var(--neptune-btn);
+}
 .img-planet-container {
   height: 256px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  margin-bottom: 1em;
 }
 
 .img-planet {
-  transform: scale(35%)
+  transform: scale(35%);
 }
 .img-geology {
   transform: scale(20%);
@@ -264,9 +242,6 @@ menu {
   top: 9em;
 }
 .info-text {
-
-  max-width: 500px;
-  margin: auto;
   padding: 0 2em;
   display: flex;
   flex-direction: column;
@@ -276,7 +251,6 @@ cite {
   font-size: 12px;
   font-style: normal;
   color: var(--light-gray);
-  margin-top: 1em;
 }
 cite a {
   color: var(--light-gray);
@@ -303,15 +277,11 @@ cite a:last-child :first-child {
   border: var(--border);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  min-width: 375px;
-  max-width: 500px;
-  margin: auto;
 }
 
 /* Tablet styles */
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header h2 {
     display: block;
     border: none;
@@ -341,17 +311,26 @@ cite a:last-child :first-child {
 
   .info-section {
     display: grid;
-    grid: [row1-start] "planet planet" 1fr [row1-end]
-          [row2-start] "text menu" 1fr [row2-end];
-    justify-content: space-evenly;
+    grid:
+      [row1-start] "planet planet" 1fr [row1-end]
+      [row2-start] "text menu" 1fr [row2-end];
+    justify-content: space-between;
   }
   .img-planet-container {
     grid-area: planet;
   }
+  .img-planet {
+    transform: scale(50%);
+  }
+  .img-geology {
+    transform: scale(25%);
+    position: absolute;
+    top: 17em;
+  }
   .info-text {
     grid-area: text;
     text-align: left;
-    width: 339px;
+    margin: auto;
   }
   menu {
     grid-area: menu;
@@ -359,10 +338,64 @@ cite a:last-child :first-child {
     flex-direction: column;
     justify-content: center;
     gap: 1em;
-    width: 281px;
+    min-width: 281px;
   }
   menu button {
     border: var(--border);
     height: 40px;
+    text-align: left;
+    color: white;
+  }
+  .menu-btn-nmbr {
+    display: inline;
+    margin: 0 1em;
+    opacity: 0.5;
+  }
+  .menu-mercury,
+  .menu-venu,
+  .menu-earth,
+  .menu-mars,
+  .menu-jupiter,
+  .menu-saturn,
+  .menu-uranus,
+  .menu-neptune {
+    text-decoration: none;
+    border: none;
+  }
+  .menu-mercury {
+    background-color: var(--mercury-btn);
+  }
+  .menu-venus {
+    background-color: var(--venus-btn);
+  }
+  .menu-earth {
+    background-color: var(--earth-btn);
+  }
+  .menu-mars {
+    background-color: var(--mars-btn);
+  }
+  .menu-jupiter {
+    background-color: var(--jupiter-btn);
+  }
+  .menu-saturn {
+    background-color: var(--saturn-btn);
+  }
+  .menu-uranus {
+    background-color: var(--uranus-btn);
+  }
+  .menu-neptune {
+    background-color: var(--neptune-btn);
+  }
+  .stats-section {
+    display: grid;
+    grid: 1fr / 1fr 1fr 1fr 1fr; 
+    gap: 1em;
+  }
+  .stat-box {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 88px;
+    text-align: left;
+    padding: 1em;
   }
 }

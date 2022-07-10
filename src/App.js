@@ -125,7 +125,8 @@ function App() {
               }
               onClick={() => setPlanetTopic("overview")}
             >
-              OVERVIEW
+              <span class="menu-btn-nmbr">01</span>
+              <span>OVERVIEW</span>
             </button>
             <button
               className={
@@ -135,7 +136,8 @@ function App() {
               }
               onClick={() => setPlanetTopic("structure")}
             >
-              STRUCTURE
+              <span class="menu-btn-nmbr">02</span>
+              <span>STRUCTURE</span>
             </button>
             <button
               className={
@@ -145,7 +147,8 @@ function App() {
               }
               onClick={() => setPlanetTopic("geology")}
             >
-              SURFACE
+              <span class="menu-btn-nmbr">03</span>
+              <span>SURFACE</span>
             </button>
           </menu>
           <div className="img-planet-container">
