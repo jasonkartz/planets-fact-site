@@ -31,27 +31,35 @@
   box-sizing: border-box;
   margin: 0;
 }
+
 .bullet-mercury {
   background-color: var(--mercury-bullet);
 }
+
 .bullet-venus {
   background-color: var(--venus-bullet);
 }
+
 .bullet-earth {
   background-color: var(--earth-bullet);
 }
+
 .bullet-mars {
   background-color: var(--mars-bullet);
 }
+
 .bullet-jupiter {
   background-color: var(--jupiter-bullet);
 }
+
 .bullet-saturn {
   background-color: var(--saturn-bullet);
 }
+
 .bullet-uranus {
   background-color: var(--uranus-bullet);
 }
+
 .bullet-neptune {
   background-color: var(--neptune-bullet);
 }
@@ -67,24 +75,25 @@ body {
   background-color: var(--midnight-blue);
   background-image: url("../public/assets/background-stars.svg");
 }
-.container {
-  margin: auto;
-}
+
 button {
   background-color: transparent;
   border: none;
 }
+
 h1,
 h2 {
   font-family: "Antonio", "Courier New", Courier, monospace;
   font-weight: 500;
   text-transform: uppercase;
 }
-h1 {
+
+h2 {
   font-size: 40px;
 }
-h2 {
-  font-size: 20px;
+
+h1 {
+  font-size: 28px;
   letter-spacing: -1.5px;
 }
 
@@ -92,16 +101,18 @@ h3,
 h4 {
   font-weight: 700;
 }
+
 h3 {
   letter-spacing: 2.6px;
 }
+
 h4 {
   letter-spacing: 1px;
   font-size: 8px;
   color: var(--light-gray);
 }
 
-header h2 {
+header h1 {
   border-bottom: var(--border);
   padding: 0.75em;
   font-size: 28px;
@@ -110,26 +121,30 @@ header h2 {
   align-items: center;
   cursor: default;
 }
-header h2 button {
+
+header h1 button {
   background-color: transparent;
   padding: 8px 0 0 0;
 }
-header h2 button:hover {
+
+header h1 button:hover {
   cursor: pointer;
 }
+
 nav {
   display: none;
   position: absolute;
-  min-width: 100%;
   border-bottom: var(--border);
   background-color: var(--midnight-blue);
   z-index: 1;
+  width: 100%;
 }
+
 nav ul {
   list-style: none;
-  padding: 0;
   padding: 1.5em;
 }
+
 nav ul li {
   font-size: 15px;
   font-weight: bold;
@@ -140,23 +155,25 @@ nav ul li {
   gap: 1.5em;
   align-items: center;
 }
-nav ul li :last-child {
-  margin-left: auto;
-}
+
 nav ul li:last-child {
   border-bottom: none;
 }
+
 nav ul li:hover {
   cursor: pointer;
 }
+
 nav ul li:hover span {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 0.25em;
 }
+
 nav ul li:hover :last-child {
   opacity: 1;
 }
+
 .bullet {
   height: 20px;
   width: 20px;
@@ -170,6 +187,7 @@ menu {
   justify-content: space-between;
   border-bottom: var(--border);
 }
+
 menu button {
   font-size: 9px;
   font-weight: bold;
@@ -177,9 +195,11 @@ menu button {
   color: var(--light-gray);
   padding: 1em 0;
 }
+
 .menu-btn-nmbr {
   display: none;
 }
+
 .topic-btn:hover {
   cursor: pointer;
   color: white;
@@ -203,27 +223,35 @@ menu button {
 .menu-mercury {
   text-decoration-color: var(--mercury-btn);
 }
+
 .menu-venus {
   text-decoration-color: var(--venus-btn);
 }
+
 .menu-earth {
   text-decoration-color: var(--earth-btn);
 }
+
 .menu-mars {
   text-decoration-color: var(--mars-btn);
 }
+
 .menu-jupiter {
   text-decoration-color: var(--jupiter-btn);
 }
+
 .menu-saturn {
   text-decoration-color: var(--saturn-btn);
 }
+
 .menu-uranus {
   text-decoration-color: var(--uranus-btn);
 }
+
 .menu-neptune {
   text-decoration-color: var(--neptune-btn);
 }
+
 .img-planet-container {
   height: 256px;
   display: flex;
@@ -236,32 +264,39 @@ menu button {
 .img-planet {
   transform: scale(35%);
 }
+
 .img-geology {
   transform: scale(20%);
   position: absolute;
   top: 9em;
 }
+
 .info-text {
   padding: 0 2em;
   display: flex;
   flex-direction: column;
   gap: 2em;
 }
+
 cite {
   font-size: 12px;
   font-style: normal;
   color: var(--light-gray);
 }
+
 cite a {
   color: var(--light-gray);
   font-weight: bold;
 }
+
 cite:hover a {
   color: white;
 }
+
 cite:hover .source-icon {
   opacity: 1;
 }
+
 cite a:last-child :first-child {
   vertical-align: sub;
 }
@@ -272,6 +307,7 @@ cite a:last-child :first-child {
   flex-direction: column;
   gap: 1em;
 }
+
 .stat-box {
   padding: 1em;
   border: var(--border);
@@ -282,29 +318,61 @@ cite a:last-child :first-child {
 /* Tablet styles */
 
 @media (min-width: 700px) {
-  header h2 {
-    display: block;
-    border: none;
+  h2 {
+    font-size: 48px;
   }
+
+  header {
+    border-bottom: var(--border);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 1.5em;
+  }
+
+  header h1 {
+    border: 0;
+    padding: 0;
+    align-self: center;
+  }
+
   nav {
-    display: block;
+    display: inline;
     position: relative;
     z-index: 0;
-    border: none;
+    border: 0;
+    width: auto;
   }
+
   nav ul {
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-around;
+    width: 100%;
   }
+
   nav ul li {
+    padding: 0;
     border: none;
+    display: inline;
+    font-size: 11px;
   }
+
+  nav ul li :last-child {
+    margin: 0;
+  }
+
   .mobile-menu-btn {
     display: none;
   }
+
   .bullet {
     display: none;
   }
+
   .chevron-icon {
     display: none;
   }
@@ -312,26 +380,30 @@ cite a:last-child :first-child {
   .info-section {
     display: grid;
     grid:
-      [row1-start] "planet planet" 1fr [row1-end]
-      [row2-start] "text menu" 1fr [row2-end];
+      [row1-start] "planet planet" 1fr [row1-end] [row2-start] "text menu" 1fr [row2-end];
     justify-content: space-between;
   }
+
   .img-planet-container {
     grid-area: planet;
   }
+
   .img-planet {
     transform: scale(50%);
   }
+
   .img-geology {
     transform: scale(25%);
     position: absolute;
     top: 17em;
   }
+
   .info-text {
     grid-area: text;
     text-align: left;
     margin: auto;
   }
+
   menu {
     grid-area: menu;
     border: none;
@@ -340,17 +412,20 @@ cite a:last-child :first-child {
     gap: 1em;
     min-width: 281px;
   }
+
   menu button {
     border: var(--border);
     height: 40px;
     text-align: left;
     color: white;
   }
+
   .menu-btn-nmbr {
     display: inline;
     margin: 0 1em;
     opacity: 0.5;
   }
+
   .menu-mercury,
   .menu-venu,
   .menu-earth,
@@ -362,40 +437,84 @@ cite a:last-child :first-child {
     text-decoration: none;
     border: none;
   }
+
   .menu-mercury {
     background-color: var(--mercury-btn);
   }
+
   .menu-venus {
     background-color: var(--venus-btn);
   }
+
   .menu-earth {
     background-color: var(--earth-btn);
   }
+
   .menu-mars {
     background-color: var(--mars-btn);
   }
+
   .menu-jupiter {
     background-color: var(--jupiter-btn);
   }
+
   .menu-saturn {
     background-color: var(--saturn-btn);
   }
+
   .menu-uranus {
     background-color: var(--uranus-btn);
   }
+
   .menu-neptune {
     background-color: var(--neptune-btn);
   }
+
   .stats-section {
     display: grid;
-    grid: 1fr / 1fr 1fr 1fr 1fr; 
+    grid: 1fr / 1fr 1fr 1fr 1fr;
     gap: 1em;
   }
+
   .stat-box {
     flex-direction: column;
     justify-content: space-evenly;
     height: 88px;
     text-align: left;
     padding: 1em;
+  }
+}
+
+/* Desktop styles */
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    gap: 2em;
+  }
+
+  .info-section {
+    display: grid;
+    grid:
+      [row1-start] "planet text" 1fr [row1-end] [row2-start] "planet menu" 1fr [row2-end];
+    justify-content: space-between;
+  }
+
+  .img-planet {
+    transform: scale(100%);
+  }
+
+  .img-geology {
+    transform: scale(50%);
+    position: absolute;
+    top: 10em;
   }
 }

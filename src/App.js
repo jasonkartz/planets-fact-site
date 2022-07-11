@@ -10,17 +10,17 @@ function App() {
   const [planetTopic, setPlanetTopic] = useState("overview");
 
   return (
-    <div className="container">
+    <>
       <header>
-        <h2>
-          <span>THE PLANETS</span>{" "}
+        <h1>
+          <span>THE PLANETS</span>
           <button
             class="mobile-menu-btn"
             onClick={() => setDisplayMenu(!displayMenu)}
           >
             <HamburgerIcon displayMenu={displayMenu} />
           </button>
-        </h2>
+        </h1>
         <nav style={{ display: displayMenu ? "block" : null }}>
           <ul>
             <li
@@ -170,7 +170,7 @@ function App() {
             )}
           </div>
           <div className="info-text">
-            <h1>{data[planet].name}</h1>
+            <h2>{data[planet].name}</h2>
             <p>{data[planet][planetTopic].content}</p>
             <cite>
               Source :{" "}
@@ -194,23 +194,23 @@ function App() {
         <section className="stats-section">
           <div className="stat-box">
             <h4>ROTATION TIME</h4>
-            <h2>{data[planet].rotation}</h2>
+            <h1>{data[planet].rotation}</h1>
           </div>
           <div className="stat-box">
             <h4>REVOLUTION TIME</h4>
-            <h2>{data[planet].revolution}</h2>
+            <h1>{data[planet].revolution}</h1>
           </div>
           <div className="stat-box">
             <h4>RADIUS</h4>
-            <h2>{data[planet].radius}</h2>
+            <h1>{data[planet].radius}</h1>
           </div>
           <div className="stat-box">
             <h4>AVERAGE TEMP.</h4>
-            <h2>{data[planet].temperature}</h2>
+            <h1>{data[planet].temperature}</h1>
           </div>
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
