@@ -32,6 +32,10 @@
   margin: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .bullet-mercury {
   background-color: var(--mercury-bullet);
 }
@@ -69,8 +73,6 @@
 body {
   font-family: "League Spartan", Verdana, Geneva, Tahoma, sans-serif;
   color: white;
-  font-size: 11px;
-  line-height: 25px;
   text-align: center;
   background-color: var(--midnight-blue);
   background-image: url("../public/assets/background-stars.svg");
@@ -81,41 +83,49 @@ button {
   border: none;
 }
 
+p {
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  line-height: 2.5rem;
+}
+
+h1,
+h2,
+h3,
+.stat-data {
+  font-family: "Antonio", "Courier New", Courier, monospace;
+}
+
 h1,
 h2 {
-  font-family: "Antonio", "Courier New", Courier, monospace;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-h2 {
-  font-size: 40px;
-}
-
 h1 {
-  font-size: 28px;
-  letter-spacing: -1.5px;
+  font-size: 2.8rem;
+  letter-spacing: -0.15rem;
 }
 
-h3,
-h4 {
-  font-weight: 700;
+h2 {
+  font-size: clamp(4rem, 4vw, 8rem);
 }
 
 h3 {
-  letter-spacing: 2.6px;
+  font-size: clamp(.8rem, 1vw, 1.1rem);
+  font-weight: 700;
+  letter-spacing: clamp(.073rem, .1vw, .1rem);
+  color: var(--light-gray);
 }
 
-h4 {
-  letter-spacing: 1px;
-  font-size: 8px;
-  color: var(--light-gray);
+.stat-data {
+  font-size: clamp(2.4rem, 3vw, 4rem);
+  letter-spacing: clamp(-.075rem, -.1rem, -.15rem);
+  text-transform: uppercase;
 }
 
 header h1 {
   border-bottom: var(--border);
   padding: 0.75em;
-  font-size: 28px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -252,8 +262,7 @@ menu button {
   text-decoration-color: var(--neptune-btn);
 }
 
-.img-planet-container {
-  height: 256px;
+.planet-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -271,7 +280,7 @@ menu button {
   top: 9em;
 }
 
-.info-text {
+.info-section {
   padding: 0 2em;
   display: flex;
   flex-direction: column;
@@ -279,7 +288,7 @@ menu button {
 }
 
 cite {
-  font-size: 12px;
+  font-size: clamp(1.2rem, 1vw, 1.4rem);
   font-style: normal;
   color: var(--light-gray);
 }
@@ -313,208 +322,4 @@ cite a:last-child :first-child {
   border: var(--border);
   display: flex;
   justify-content: space-between;
-}
-
-/* Tablet styles */
-
-@media (min-width: 700px) {
-  h2 {
-    font-size: 48px;
-  }
-
-  header {
-    border-bottom: var(--border);
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: stretch;
-    gap: 1.5em;
-  }
-
-  header h1 {
-    border: 0;
-    padding: 0;
-    align-self: center;
-  }
-
-  nav {
-    display: inline;
-    position: relative;
-    z-index: 0;
-    border: 0;
-    width: auto;
-  }
-
-  nav ul {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-  }
-
-  nav ul li {
-    padding: 0;
-    border: none;
-    display: inline;
-    font-size: 11px;
-  }
-
-  nav ul li :last-child {
-    margin: 0;
-  }
-
-  .mobile-menu-btn {
-    display: none;
-  }
-
-  .bullet {
-    display: none;
-  }
-
-  .chevron-icon {
-    display: none;
-  }
-
-  .info-section {
-    display: grid;
-    grid:
-      [row1-start] "planet planet" 1fr [row1-end] [row2-start] "text menu" 1fr [row2-end];
-    justify-content: space-between;
-  }
-
-  .img-planet-container {
-    grid-area: planet;
-  }
-
-  .img-planet {
-    transform: scale(50%);
-  }
-
-  .img-geology {
-    transform: scale(25%);
-    position: absolute;
-    top: 17em;
-  }
-
-  .info-text {
-    grid-area: text;
-    text-align: left;
-    margin: auto;
-  }
-
-  menu {
-    grid-area: menu;
-    border: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1em;
-    min-width: 281px;
-  }
-
-  menu button {
-    border: var(--border);
-    height: 40px;
-    text-align: left;
-    color: white;
-  }
-
-  .menu-btn-nmbr {
-    display: inline;
-    margin: 0 1em;
-    opacity: 0.5;
-  }
-
-  .menu-mercury,
-  .menu-venu,
-  .menu-earth,
-  .menu-mars,
-  .menu-jupiter,
-  .menu-saturn,
-  .menu-uranus,
-  .menu-neptune {
-    text-decoration: none;
-    border: none;
-  }
-
-  .menu-mercury {
-    background-color: var(--mercury-btn);
-  }
-
-  .menu-venus {
-    background-color: var(--venus-btn);
-  }
-
-  .menu-earth {
-    background-color: var(--earth-btn);
-  }
-
-  .menu-mars {
-    background-color: var(--mars-btn);
-  }
-
-  .menu-jupiter {
-    background-color: var(--jupiter-btn);
-  }
-
-  .menu-saturn {
-    background-color: var(--saturn-btn);
-  }
-
-  .menu-uranus {
-    background-color: var(--uranus-btn);
-  }
-
-  .menu-neptune {
-    background-color: var(--neptune-btn);
-  }
-
-  .stats-section {
-    display: grid;
-    grid: 1fr / 1fr 1fr 1fr 1fr;
-    gap: 1em;
-  }
-
-  .stat-box {
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 88px;
-    text-align: left;
-    padding: 1em;
-  }
-}
-
-/* Desktop styles */
-
-@media (min-width: 1000px) {
-  body {
-    font-size: 14px;
-  }
-
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  nav ul {
-    gap: 2em;
-  }
-
-  .info-section {
-    display: grid;
-    grid:
-      [row1-start] "planet text" 1fr [row1-end] [row2-start] "planet menu" 1fr [row2-end];
-    justify-content: space-between;
-  }
-
-  .img-planet {
-    transform: scale(100%);
-  }
-
-  .img-geology {
-    transform: scale(50%);
-    position: absolute;
-    top: 10em;
-  }
 }

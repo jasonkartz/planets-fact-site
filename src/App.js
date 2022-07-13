@@ -115,98 +115,97 @@ function App() {
         </nav>
       </header>
       <main>
-        <section className="info-section">
-          <menu>
-            <button
-              className={
-                planetTopic === "overview"
-                  ? `menu-${data[planet].name.toLowerCase()}`
-                  : "topic-btn"
-              }
-              onClick={() => setPlanetTopic("overview")}
-            >
-              <span class="menu-btn-nmbr">01</span>
-              <span>OVERVIEW</span>
-            </button>
-            <button
-              className={
-                planetTopic === "structure"
-                  ? `menu-${data[planet].name.toLowerCase()}`
-                  : "topic-btn"
-              }
-              onClick={() => setPlanetTopic("structure")}
-            >
-              <span class="menu-btn-nmbr">02</span>
-              <span>STRUCTURE</span>
-            </button>
-            <button
-              className={
-                planetTopic === "geology"
-                  ? `menu-${data[planet].name.toLowerCase()}`
-                  : "topic-btn"
-              }
-              onClick={() => setPlanetTopic("geology")}
-            >
-              <span class="menu-btn-nmbr">03</span>
-              <span>SURFACE</span>
-            </button>
-          </menu>
-          <div className="img-planet-container">
+        <menu>
+          <button
+            className={
+              planetTopic === "overview"
+                ? `menu-${data[planet].name.toLowerCase()}`
+                : "topic-btn"
+            }
+            onClick={() => setPlanetTopic("overview")}
+          >
+            <span class="menu-btn-nmbr">01</span>
+            <span>OVERVIEW</span>
+          </button>
+          <button
+            className={
+              planetTopic === "structure"
+                ? `menu-${data[planet].name.toLowerCase()}`
+                : "topic-btn"
+            }
+            onClick={() => setPlanetTopic("structure")}
+          >
+            <span class="menu-btn-nmbr">02</span>
+            <span>STRUCTURE</span>
+          </button>
+          <button
+            className={
+              planetTopic === "geology"
+                ? `menu-${data[planet].name.toLowerCase()}`
+                : "topic-btn"
+            }
+            onClick={() => setPlanetTopic("geology")}
+          >
+            <span class="menu-btn-nmbr">03</span>
+            <span>SURFACE</span>
+          </button>
+        </menu>
+        <section className="planet-section">
+          <img
+            className="img-planet"
+            src={
+              planetTopic === "overview" || planetTopic === "geology"
+                ? data[planet].images.overview
+                : data[planet].images[planetTopic]
+            }
+            alt="mercury"
+          />
+          {planetTopic === "geology" && (
             <img
-              className="img-planet"
-              src={
-                planetTopic === "overview" || planetTopic === "geology"
-                  ? data[planet].images.overview
-                  : data[planet].images[planetTopic]
-              }
-              alt="mercury"
+              className="img-geology"
+              src={data[planet].images.geology}
+              alt={`${planet} surface`}
             />
-            {planetTopic === "geology" && (
-              <img
-                className="img-geology"
-                src={data[planet].images.geology}
-                alt={`${planet} surface`}
-              />
-            )}
-          </div>
-          <div className="info-text">
-            <h2>{data[planet].name}</h2>
-            <p>{data[planet][planetTopic].content}</p>
-            <cite>
-              Source :{" "}
-              <a
-                href={data[planet][planetTopic].source}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Wikipedia
-              </a>{" "}
-              <a
-                href={data[planet][planetTopic].source}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <SourceIcon />
-              </a>
-            </cite>
-          </div>
+          )}
         </section>
+        <section className="info-section">
+          <h2>{data[planet].name}</h2>
+          <p>{data[planet][planetTopic].content}</p>
+          <cite>
+            Source :{" "}
+            <a
+              href={data[planet][planetTopic].source}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Wikipedia
+            </a>{" "}
+            <a
+              href={data[planet][planetTopic].source}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SourceIcon />
+            </a>
+          </cite>
+        </section>
+
         <section className="stats-section">
           <div className="stat-box">
-            <h4>ROTATION TIME</h4>
-            <h1>{data[planet].rotation}</h1>
+            <h3>ROTATION TIME</h3>
+            <p class="stat-data">{data[planet].rotation}</p>
           </div>
           <div className="stat-box">
-            <h4>REVOLUTION TIME</h4>
-            <h1>{data[planet].revolution}</h1>
+            <h3>REVOLUTION TIME</h3>
+            <p class="stat-data">{data[planet].revolution}</p>
           </div>
           <div className="stat-box">
-            <h4>RADIUS</h4>
-            <h1>{data[planet].radius}</h1>
+            <h3>RADIUS</h3>
+            <p class="stat-data">{data[planet].radius}</p>
           </div>
           <div className="stat-box">
-            <h4>AVERAGE TEMP.</h4>
-            <h1>{data[planet].temperature}</h1>
+            <h3>AVERAGE TEMP.</h3>
+            <p class="stat-data">{data[planet].temperature}</p>
           </div>
         </section>
       </main>
