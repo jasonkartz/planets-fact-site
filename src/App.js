@@ -150,9 +150,9 @@ function App() {
             <span>SURFACE</span>
           </button>
         </menu>
-        <section className="planet-section">
+        <section class="planet-section">
           <img
-            className="img-planet"
+            className={`img-planet-${data[planet].name.toLowerCase()}`}
             src={
               planetTopic === "overview" || planetTopic === "geology"
                 ? data[planet].images.overview
