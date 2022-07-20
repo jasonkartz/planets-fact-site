@@ -296,7 +296,6 @@ menu button {
   width: 55px;
   position: absolute;
   top: 43%;
-  right: 16rem;
 }
 
 .info-section {
@@ -331,6 +330,7 @@ cite a:last-child :first-child {
 
 .stats-section {
   margin-inline: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -355,4 +355,94 @@ h3 {
   font-size: clamp(2rem, 2vw, 4rem);
   letter-spacing: clamp(-.075rem, -.1rem, -.15rem);
   text-transform: uppercase;
+}
+
+@media (min-width: 700px) {
+  main {
+    grid: [row1-start] "planet planet" 1fr [row1-end] [row2-start] "info menu" 1fr [row2-end] [row3-start] "stats stats" 1fr [row3-end];
+  }
+
+  menu {
+    border: none;
+    grid-area: menu;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  menu button {
+    min-width: 20.81rem;
+    display: flex;
+    border: var(--border);
+  }
+
+  .menu-btn-nmbr {
+    display: inline;
+    margin-inline: 1rem;
+  }
+
+  .menu-mercury,
+  .menu-venu,
+  .menu-earth,
+  .menu-mars,
+  .menu-jupiter,
+  .menu-saturn,
+  .menu-uranus,
+  .menu-neptune {
+    text-decoration: none;
+  }
+
+  .menu-mercury {
+    background-color: var(--mercury-btn);
+  }
+
+  .menu-venus {
+    background-color: var(--venus-btn);
+  }
+
+  .menu-earth {
+    background-color: var(--earth-btn);
+  }
+
+  .menu-mars {
+    background-color: var(--mars-btn);
+  }
+
+  .menu-jupiter {
+    background-color: var(--jupiter-btn);
+  }
+
+  .menu-saturn {
+    background-color: var(--saturn-btn);
+  }
+
+  .menu-uranus {
+    background-color: var(--uranus-btn);
+  }
+
+  .menu-neptune {
+    background-color: var(--neptune-btn);
+  }
+
+  .planet-section {
+    grid-area: planet;
+  }
+
+  .info-section {
+    text-align: left;
+    grid-area: info;
+    min-width: 33.9rem;
+    max-width: 50rem;
+  }
+
+  .stats-section {
+    grid-area: stats;
+    flex-direction: row;
+  }
+
+  .stat-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }
