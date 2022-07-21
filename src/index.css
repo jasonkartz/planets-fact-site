@@ -180,10 +180,11 @@ nav ul li:hover :last-child {
 main {
   display: grid;
   gap: 3rem;
+  padding-inline: 2rem;
 }
 
 menu {
-  padding: 0 2rem;
+  margin: 0 1rem;
   display: flex;
   justify-content: space-between;
   border-bottom: var(--border);
@@ -295,17 +296,18 @@ menu button {
 .img-geology {
   width: 55px;
   position: absolute;
-  top: 43%;
+  top: 29rem;
 }
 
 .info-section {
-  padding: 0 2rem;
+  margin: 0 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
 cite {
+  margin-top: 1rem;
   font-size: clamp(1.2rem, 1vw, 1.4rem);
   font-style: normal;
   color: var(--light-gray);
@@ -329,7 +331,6 @@ cite a:last-child :first-child {
 }
 
 .stats-section {
-  margin-inline: 2rem;
   margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
@@ -357,9 +358,55 @@ h3 {
   text-transform: uppercase;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 768px) {
   main {
-    grid: [row1-start] "planet planet" 1fr [row1-end] [row2-start] "info menu" 1fr [row2-end] [row3-start] "stats stats" 1fr [row3-end];
+    grid: [row1-start] "planet planet"[row1-end] [row2-start] "info menu"[row2-end] [row3-start] "stats stats"[row3-end];
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .planet-section {
+    margin-top: 2rem;
+    height: 422px;
+  }
+
+  .img-planet-mercury {
+    width: 184px;
+  }
+
+  .img-planet-venus {
+    width: 253px;
+  }
+
+  .img-planet-earth {
+    width: 285px;
+  }
+
+  .img-planet-mars {
+    width: 213px;
+  }
+
+  .img-planet-jupiter {
+    width: 369px;
+  }
+
+  .img-planet-saturn {
+    width: 422px;
+  }
+
+  .img-planet-uranus {
+    width: 290px;
+  }
+
+  .img-planet-neptune {
+    width: 285px;
+  }
+
+  .img-geology {
+    width: 85px;
+    position: absolute;
+    top: 36rem;
   }
 
   menu {
@@ -371,7 +418,7 @@ h3 {
   }
 
   menu button {
-    min-width: 20.81rem;
+    width: 20.81rem;
     display: flex;
     border: var(--border);
   }
@@ -436,12 +483,18 @@ h3 {
   }
 
   .stats-section {
+    margin-top: 2rem;
     grid-area: stats;
     flex-direction: row;
+    justify-content: space-evenly;
+    align-self: flex-start;
   }
 
   .stat-box {
+    min-width: 23%;
+    padding: 1.5rem;
     flex-direction: column;
+    gap: 1rem;
     justify-content: center;
     align-items: flex-start;
   }
