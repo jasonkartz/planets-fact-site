@@ -31,8 +31,8 @@ function App() {
               }}
             >
               <div className="bullet bullet-mercury"></div>
-              <span>MERCURY</span>
-              <ChevronIcon />
+              <span className={planet === 0 && "nav-mercury"}>MERCURY</span>
+              <ChevronIcon className="chevron-icon" />
             </li>
             <li
               onClick={() => {
@@ -42,8 +42,8 @@ function App() {
               }}
             >
               <div className="bullet bullet-venus"></div>
-              <span>VENUS</span>
-              <ChevronIcon />
+              <span className={planet === 1 && "nav-venus"}>VENUS</span>
+              <ChevronIcon className="chevron-icon" />
             </li>
             <li
               onClick={() => {
@@ -53,8 +53,8 @@ function App() {
               }}
             >
               <div className="bullet bullet-earth"></div>
-              <span>EARTH</span>
-              <ChevronIcon />
+              <span className={planet === 2 && "nav-earth"}>EARTH</span>
+              <ChevronIcon className="chevron-icon" />
             </li>
             <li
               onClick={() => {
@@ -64,8 +64,8 @@ function App() {
               }}
             >
               <div className="bullet bullet-mars"></div>
-              <span>MARS</span>
-              <ChevronIcon />
+              <span className={planet === 3 && "nav-mars"}>MARS</span>
+              <ChevronIcon className="chevron-icon" />
             </li>
             <li
               onClick={() => {
@@ -75,8 +75,8 @@ function App() {
               }}
             >
               <span className="bullet bullet-jupiter"></span>
-              <span>JUPITER</span>
-              <ChevronIcon />
+              <span className={planet === 4 && "nav-jupiter"}>JUPITER</span>
+              <ChevronIcon className="chevron-icon" />
             </li>
             <li
               onClick={() => {
@@ -86,8 +86,8 @@ function App() {
               }}
             >
               <span className="bullet bullet-saturn"></span>
-              <span>SATURN</span>
-              <ChevronIcon />
+              <span className={planet === 5 && "nav-saturn"}>SATURN</span>
+              <ChevronIcon className="chevron-icon" />
             </li>
             <li
               onClick={() => {
@@ -97,8 +97,8 @@ function App() {
               }}
             >
               <span className="bullet bullet-uranus"></span>
-              <span>URANUS</span>
-              <ChevronIcon />
+              <span className={planet === 6 && "nav-uranus"}>URANUS</span>
+              <ChevronIcon className="chevron-icon" />
             </li>
             <li
               onClick={() => {
@@ -108,8 +108,8 @@ function App() {
               }}
             >
               <span className="bullet bullet-neptune"></span>
-              <span>NEPTUNE</span>
-              <ChevronIcon />
+              <span className={planet === 7 && "nav-neptune"}>NEPTUNE</span>
+              <ChevronIcon className="chevron-icon" />
             </li>
           </ul>
         </nav>
