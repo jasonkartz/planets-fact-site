@@ -213,7 +213,7 @@ menu button {
   color: white;
   text-decoration: underline;
   text-decoration-thickness: .4rem;
-  text-underline-offset: 0.65rem;
+  text-underline-offset: 1.15rem;
 }
 
 .menu-mercury {
@@ -352,7 +352,7 @@ h3 {
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   header {
     border-bottom: var(--border);
     display: flex;
@@ -405,7 +405,7 @@ h3 {
     cursor: default;
     text-decoration: underline;
     text-decoration-thickness: .4rem;
-    text-underline-offset: 0.65rem;
+    text-underline-offset: 2.3rem;
   }
 
   .nav-mercury:hover,
@@ -611,5 +611,38 @@ h3 {
     gap: 1rem;
     justify-content: center;
     align-items: flex-start;
+  }
+}
+
+@media (min-width: 950px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  header h1 {
+
+    min-width: 14rem;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  .nav-mercury,
+  .nav-venus,
+  .nav-earth,
+  .nav-mars,
+  .nav-jupiter,
+  .nav-saturn,
+  .nav-uranus,
+  .nav-neptune {
+    text-underline-offset: -3.8rem;
   }
 }
