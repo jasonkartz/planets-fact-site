@@ -150,6 +150,12 @@ nav ul li {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  opacity: .75;
+  transition: opacity .25s ease-in-out;
+}
+
+nav ul li:hover {
+  opacity: 1;
 }
 
 nav ul li:last-child {
@@ -162,6 +168,7 @@ nav ul li:hover {
 
 nav ul li:hover :last-child {
   opacity: 1;
+  transition: opacity .25s ease-in-out;
 }
 
 .bullet {
@@ -190,6 +197,8 @@ menu button {
   letter-spacing: 1.93px;
   color: var(--light-gray);
   padding: 1.75rem 0;
+  transition: text-decoration .25s ease-in-out,
+    color .25s ease-in-out;
 }
 
 .menu-btn-nmbr {
@@ -290,7 +299,7 @@ menu button {
 .img-geology {
   width: 55px;
   position: absolute;
-  top: 29rem;
+  top: 30rem;
 }
 
 .info-section {
@@ -406,6 +415,7 @@ h3 {
     text-decoration: underline;
     text-decoration-thickness: .4rem;
     text-underline-offset: 2.3rem;
+    opacity: 1;
   }
 
   .nav-mercury:hover,
@@ -419,7 +429,7 @@ h3 {
     cursor: default;
   }
 
-  .nav-mercury:hover {
+  .nav-mercury {
     text-decoration-color: var(--mercury-btn);
   }
 
@@ -548,51 +558,67 @@ h3 {
     width: 100%;
     display: flex;
     border: var(--border);
+    transition: background-color 0.25s ease;
+  }
+
+  menu button:hover {
+    background-color: var(--dark-gray);
+    border-color: var(--dark-gray);
+    text-decoration: none;
   }
 
   .menu-btn-nmbr {
     display: inline;
     margin-inline: 1rem;
+    opacity: .75;
   }
 
-  .menu-mercury {
+  .menu-mercury,
+  .menu-mercury:hover {
     background-color: var(--mercury-btn);
     border: none;
   }
 
-  .menu-venus {
+  .menu-venus,
+  .menu-venus:hover {
     background-color: var(--venus-btn);
-    border: none;
+    border-color: var(--venus-btn);
   }
 
-  .menu-earth {
+  .menu-earth,
+  .menu-earth:hover {
     background-color: var(--earth-btn);
     border: none;
   }
 
-  .menu-mars {
+  .menu-mars,
+  .menu-mars:hover {
     background-color: var(--mars-btn);
-    border: none;
+    border-color: var(--mars-btn);
   }
 
-  .menu-jupiter {
+  .menu-jupiter,
+  .menu-jupiter:hover {
     background-color: var(--jupiter-btn);
     border: none;
   }
 
-  .menu-saturn {
+  .menu-saturn,
+  .menu-saturn:hover {
     background-color: var(--saturn-btn);
-    border: none;
+    border-color: var(--saturn-btn);
   }
 
-  .menu-uranus {
+  .menu-uranus,
+  .menu-uranus:hover {
     background-color: var(--uranus-btn);
-    border: none;
+    border-color: var(--uranus-btn);
   }
 
-  .menu-neptune {
+  .menu-neptune,
+  .menu-neptune:hover {
     background-color: var(--neptune-btn);
-    border: none;
+    border-color: var(--neptune-btn);
   }
 
   .planet-section {
