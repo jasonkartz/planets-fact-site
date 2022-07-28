@@ -31,7 +31,9 @@ function App() {
               }}
             >
               <div className="bullet bullet-mercury"></div>
-              <span className={planet === 0 && "nav-mercury"}>MERCURY</span>
+              <span className={planet === 0 ? "nav-mercury" : "nav-inactive"}>
+                MERCURY
+              </span>
               <ChevronIcon className="chevron-icon" />
             </li>
             <li
@@ -42,7 +44,9 @@ function App() {
               }}
             >
               <div className="bullet bullet-venus"></div>
-              <span className={planet === 1 && "nav-venus"}>VENUS</span>
+              <span className={planet === 1 ? "nav-venus" : "nav-inactive"}>
+                VENUS
+              </span>
               <ChevronIcon className="chevron-icon" />
             </li>
             <li
@@ -53,7 +57,9 @@ function App() {
               }}
             >
               <div className="bullet bullet-earth"></div>
-              <span className={planet === 2 && "nav-earth"}>EARTH</span>
+              <span className={planet === 2 ? "nav-earth" : "nav-inactive"}>
+                EARTH
+              </span>
               <ChevronIcon className="chevron-icon" />
             </li>
             <li
@@ -64,7 +70,9 @@ function App() {
               }}
             >
               <div className="bullet bullet-mars"></div>
-              <span className={planet === 3 && "nav-mars"}>MARS</span>
+              <span className={planet === 3 ? "nav-mars" : "nav-inactive"}>
+                MARS
+              </span>
               <ChevronIcon className="chevron-icon" />
             </li>
             <li
@@ -75,7 +83,9 @@ function App() {
               }}
             >
               <span className="bullet bullet-jupiter"></span>
-              <span className={planet === 4 && "nav-jupiter"}>JUPITER</span>
+              <span className={planet === 4 ? "nav-jupiter" : "nav-inactive"}>
+                JUPITER
+              </span>
               <ChevronIcon className="chevron-icon" />
             </li>
             <li
@@ -86,7 +96,9 @@ function App() {
               }}
             >
               <span className="bullet bullet-saturn"></span>
-              <span className={planet === 5 && "nav-saturn"}>SATURN</span>
+              <span className={planet === 5 ? "nav-saturn" : "nav-inactive"}>
+                SATURN
+              </span>
               <ChevronIcon className="chevron-icon" />
             </li>
             <li
@@ -97,7 +109,9 @@ function App() {
               }}
             >
               <span className="bullet bullet-uranus"></span>
-              <span className={planet === 6 && "nav-uranus"}>URANUS</span>
+              <span className={planet === 6 ? "nav-uranus" : "nav-inactive"}>
+                URANUS
+              </span>
               <ChevronIcon className="chevron-icon" />
             </li>
             <li
@@ -108,7 +122,9 @@ function App() {
               }}
             >
               <span className="bullet bullet-neptune"></span>
-              <span className={planet === 7 && "nav-neptune"}>NEPTUNE</span>
+              <span className={planet === 7 ? "nav-neptune" : "nav-inactive"}>
+                NEPTUNE
+              </span>
               <ChevronIcon className="chevron-icon" />
             </li>
           </ul>

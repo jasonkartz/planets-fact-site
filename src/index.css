@@ -150,11 +150,14 @@ nav ul li {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  opacity: .75;
+}
+
+.nav-inactive {
+  opacity: .5;
   transition: opacity .25s ease-in-out;
 }
 
-nav ul li:hover {
+.nav-inactive:hover {
   opacity: 1;
 }
 
@@ -197,8 +200,7 @@ menu button {
   letter-spacing: 1.93px;
   color: var(--light-gray);
   padding: 1.75rem 0;
-  transition: text-decoration .25s ease-in-out,
-    color .25s ease-in-out;
+  transition: color .25s ease-in-out;
 }
 
 .menu-btn-nmbr {
@@ -223,6 +225,7 @@ menu button {
   text-decoration: underline;
   text-decoration-thickness: .4rem;
   text-underline-offset: 1.15rem;
+
 }
 
 .menu-mercury {
