@@ -21,7 +21,15 @@ function App() {
             <HamburgerIcon displayMenu={displayMenu} />
           </button>
         </h1>
-        <nav style={{ display: displayMenu ? "block" : null }}>
+        <nav
+          style={{
+            visibility: displayMenu ? "visible" : null,
+            opacity: displayMenu ? 1 : null,
+            transition: displayMenu
+              ? "visibility 0s linear 0s, display 0s linear 0s, opacity 300ms"
+              : null,
+          }}
+        >
           <ul>
             <li
               onClick={() => {
