@@ -15,8 +15,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/planets-fact-site-using-react-kvK5Nh8-Qb)
+- Live Site URL: [Live Site](https://planets-fact-site-seven.vercel.app/)
 
 ## My process
 
